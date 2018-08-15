@@ -1,3 +1,7 @@
+#Just a simple script to do math for calculating percentage from
+#capacity email that is generated weekly for GE
+#built by Squirrel
+
 print ("What is memory_mb_used and memory_mb?")
 memory_mb_used = float(input("memory_mb_used: "))
 memory_mb = float(input("memory_mb: "))
