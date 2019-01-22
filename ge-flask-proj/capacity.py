@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
-import percentage
 #...
 app = Flask(__name__)
 #...
