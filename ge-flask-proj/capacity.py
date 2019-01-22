@@ -13,12 +13,9 @@ def percentage(a,b):
 @app.route('/')
 def capacity():
    return render_template('capacity.html')
-
-#@app.route('/capacity_results',methods = ['POST', 'GET'])
-#def result():
-   if request.method == 'POST':
-      result = request.form
-      return render_template("capacity_results.html",result = result)
+  # if request.method == 'POST':
+#      result = request.form
+      #return render_template("capacity_results.html",result = result)
 @app.route('/capacity_results_answer',methods = ['POST', 'GET'])
 def result():
     if request.method == 'POST':
