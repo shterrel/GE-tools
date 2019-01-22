@@ -5,7 +5,6 @@ app = Flask(__name__)
 #...
 bootstrap = Bootstrap(app)
 
-
 def percentage(a,b):
     results = ((a / b) * 100)
     return "%.2f" % results + "%"
@@ -13,9 +12,7 @@ def percentage(a,b):
 @app.route('/')
 def capacity():
    return render_template('capacity.html')
-  # if request.method == 'POST':
-#      result = request.form
-      #return render_template("capacity_results.html",result = result)
+
 @app.route('/capacity_results_answer',methods = ['POST', 'GET'])
 def result():
     if request.method == 'POST':
