@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}Capacity Reporting{{ title }} - Capacity{% else %}Reporting on weekly data{% endif %}
+{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-default">
+       <h1>Capacity Reporting</h1>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}
+					<form action = "http://localhost:5000/capacity_results" method = "POST">
+	         	<p>memory_mb_used <input type = "text" name = "memory_mb_used" /></p>
+	         	<p>memory_mb <input type = "text" name = "memory_mb" /></p>
+	         	<p><input type = "submit" value = "calculate" /></p>
+	      	</form>
+				{% endblock %}
+    </div>
+{% endblock %}

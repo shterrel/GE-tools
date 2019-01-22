@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+
+      <table border=0>
+          <tr><caption style="background-color:LightCyan  ">Capacity Results</caption>
+            <td> VCPU Usage {{ vcpu }} </td>
+          </tr>
+          <tr>
+            <td> Memory Usage {{ mem }} </td>
+          </tr>
+          <tr>
+            <td> Disk Usage {{ disk }}  </td>
+          </tr>
+
+      </table>
+{% endblock %}
