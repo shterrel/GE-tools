@@ -1,6 +1,7 @@
 #Just a simple script to do math for calculating percentage from
 #capacity email that is generated weekly for GE
 #built by Squirrel
+#yThere is now a Flask web front end
 
 def percentage(a,b):
     results = ((a / b) * 100)
